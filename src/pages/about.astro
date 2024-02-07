@@ -1,4 +1,9 @@
 ---
+// COMPONENTS
+import Navigation from '../components/Navigation.astro';
+import Footer from '../components/Footer.astro';
+
+// STYLES
 import '../styles/global.css';
 
 const pageTitle = "À propos de moi";
@@ -41,9 +46,7 @@ const textCase = "uppercase";
           </style>
     </head>
     <body>
-        <a href="/">Accueil</a>
-        <a href="/blog">Blog</a>
-        <a href="/about/">À propos</a>
+        <Navigation />
         <h1>{pageTitle}</h1>
         <h2>... et de mon nouveau site Astro !</h2>
         
@@ -67,6 +70,6 @@ const textCase = "uppercase";
         {happy && <p>Je suis heureux d'apprendre Astro !</p>}
         {finished && <p>J'ai terminé ce tutoriel !</p>}
         {goal === 3 ? <p>Mon objectif est de terminer en 3 jours.</p> : <p>Mon objectif n'est pas de 3 jours.</p>}
-
+        <Footer />
     </body>
 </html>

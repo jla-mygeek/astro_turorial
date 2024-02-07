@@ -1,4 +1,9 @@
 ---
+// COMPONENTS
+import Navigation from '../components/Navigation.astro';
+import Footer from '../components/Footer.astro';
+
+// STYLES
 import '../styles/global.css';
 
 const titlePage = "Page d'accueil"
@@ -13,9 +18,8 @@ const titlePage = "Page d'accueil"
         <title>{titlePage}</title>
     </head>
     <body>
-        <a href="/">Accueil</a>
-        <a href="/blog">Blog</a>
-        <a href="/about/">À propos</a>
+        <Navigation />
         <h1>My website with Astro</h1>
+        <Footer />
     </body>
 </html>
